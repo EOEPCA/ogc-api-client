@@ -1,0 +1,13 @@
+# flake8: noqa
+
+# import apis into api package
+from ogcapi_processes_client.api.capabilities_api import CapabilitiesApi
+from ogcapi_processes_client.api.conformance_declaration_api import ConformanceDeclarationApi
+from ogcapi_processes_client.api.dismiss_api import DismissApi
+from ogcapi_processes_client.api.execute_api import ExecuteApi
+from ogcapi_processes_client.api.job_list_api import JobListApi
+from ogcapi_processes_client.api.process_description_api import ProcessDescriptionApi
+from ogcapi_processes_client.api.process_list_api import ProcessListApi
+from ogcapi_processes_client.api.result_api import ResultApi
+from ogcapi_processes_client.api.status_api import StatusApi
+

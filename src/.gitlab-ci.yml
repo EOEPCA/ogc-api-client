@@ -1,0 +1,118 @@
+stages:
+- lint
+- format
+- test
+- package_and_push
+
+
+.base_ruff:
+  stage: lint
+  interruptible: true
+  image:
+    name: python:latest
+  before_script:
+    - pip install ruff pre-commit
+    - cd $CI_PROJECT_DIR
+    - ruff --version
+
+ruff_check:
+  stage: lint
+  extends: .base_ruff
+  script:
+    - ruff check --output-format=gitlab > code-quality-report.json
+  artifacts:
+    reports:
+      codequality: $CI_PROJECT_DIR/code-quality-report.json
+
+ruff_format:
+  stage: format
+  extends: .base_ruff
+  needs: 
+  - ruff_check
+  script:
+    - ruff format --diff
+
+test: 
+  stage: test
+  image: python:latest
+  needs:
+  - ruff_format
+  before_script:
+  - pip install hatch
+  script: 
+  - |
+    cd src/ogcapi_processes_client
+    hatch run default:test && exit 0 || exit 1
+
+package:
+  when: manual
+  image: python:latest
+  stage: package_and_push
+  needs: 
+  - test
+
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $TOKEN_PYPI_REGISTRY_RW
+  before_script:
+  - pip install hatch twine
+  - | 
+    VERSION=v4.45.1
+    BINARY=yq_linux_amd64
+    wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY}.tar.gz -O - | tar xz && mv ${BINARY} /usr/bin/yq
+  script:
+  - hatch build # Build package with hatch
+  # Upload to the GitLab PyPI registry and check the pull
+  - |
+      cd src/ogcapi_processes_client
+      APP_VERSION=$( yq .project.version -oy  pyproject.toml )
+      APP_NAME=$( yq .project.name -oy  pyproject.toml )
+      if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
+        echo "Now pushing on general git.terradue.com package registry, whose project ID is 1040"
+        #avoiding --no-deps and --skip-existing 
+        TWINE_USERNAME=__token__
+        TWINE_PASSWORD=$TOKEN_PYPI_REGISTRY_RW
+        python -m twine upload --repository-url ${CI_API_V4_URL}/projects/1040/packages/pypi dist/* --skip-existing
+        echo "pulling test from git.terradue.com/api/v4/projects/1040/packages/pypi/simple"
+        pip install ${APP_NAME}==${APP_VERSION} --extra-index-url https://token:${TOKEN_PYPI_REGISTRY_RW}@git.terradue.com/api/v4/projects/${PYPI_PROJECT_ID}/packages/pypi/simple/
+      else
+        echo "Now pushing on general git.terradue.com DEV package registry, whose project ID is 1047"
+        python -m twine upload --repository-url ${CI_API_V4_URL}/projects/1047/packages/pypi dist/* --skip-existing
+        #package pull test
+        echo "pulling test from git.terradue.com/api/v4/projects/1047/packages/pypi/simple"
+        pip install ${APP_NAME}==${APP_VERSION} --extra-index-url https://token:${TOKEN_PYPI_REGISTRY_RW}@git.terradue.com/api/v4/projects/${PYPI_DEV_PROJECT_ID}/packages/pypi/simple/
+      fi
+
+
+# container-build:
+#   image: docker:latest
+#   stage: build
+#   dependencies: []
+#   services:
+#     - docker:dind
+#   before_script: 
+#   - | 
+#     VERSION=v4.45.1
+#     BINARY=yq_linux_amd64
+#     wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY}.tar.gz -O - | tar xz && mv ${BINARY} /usr/bin/yq
+#   needs:
+#   - test
+#   script:
+#     - |
+#       APP_VERSION=$( cat src/*/__about__.py  | grep version | cut -d "=" -f 2 | tr -d " " | tr -d "\"" )
+#       APP_NAME=$( yq .project.name -oy  pyproject.toml )
+#       echo ${APP_NAME}:${APP_VERSION}
+#       docker login -u ${CR_USER} -p ${CR_KEY} ${REGISTRY}
+#       #docker login -u "$DOCKER_USER" -p "$DOCKER_KEY" index.docker.io
+#       echo "version: ${APP_VERSION}"
+#       if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
+#         tag="${APP_NAME}:${APP_VERSION}"
+#         echo "Running on default branch '$CI_DEFAULT_BRANCH': tag = ${tag}"cat
+#       else
+#         tag="${APP_NAME}:${APP_VERSION}-$CI_COMMIT_REF_SLUG"
+#         echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
+#       fi
+#     - |
+#       docker build -f Dockerfile -t "${REGISTRY}/${CR_REPO}/${tag}" .
+#       docker push "${REGISTRY}/${CR_REPO}/${tag}"
+

@@ -1,0 +1,71 @@
+# argowf-runner-api (c) 2024-2025
+#
+# coplac-cdse-collection is licensed under
+# Creative Commons Attribution-ShareAlike 4.0 International.
+#
+# You should have received a copy of the license along with this work.
+# If not, see <https://creativecommons.org/licenses/by-sa/4.0/>.
+
+version: '3'
+
+vars:
+  OPENAPI_CODEGEN_VERSION: 7.12.0
+
+tasks:
+
+  download_ogcapi-processes:
+    internal: true
+    vars:
+      TARGET: .
+      API: ogcapi-processes
+    status:
+    - test -f {{.TARGET}}/{{.API}}.yaml
+    cmds:
+    - wget https://developer.ogc.org/api/processes/openapi.yaml -O {{.TARGET}}/openapi.yaml
+    - redocly bundle ./openapi.yaml --output {{.TARGET}}/{{.API}}.yaml --force
+
+  # API generation
+
+  maven_download:
+    internal: true
+    status:
+    - test -f ./lib/{{.ARTIFACT_ID}}-{{.VERSION}}.jar
+    cmds:
+    - mkdir -p ./lib
+    - wget https://repo1.maven.org/maven2/{{.GROUP_ID}}/{{.ARTIFACT_ID}}/{{.VERSION}}/{{.ARTIFACT_ID}}-{{.VERSION}}.jar -O ./lib/{{.ARTIFACT_ID}}-{{.VERSION}}.jar
+
+  openapi_generator:
+    internal: true
+    deps:
+    - task: maven_download
+      vars:
+        GROUP_ID: org/openapitools
+        ARTIFACT_ID: openapi-generator-cli
+        VERSION: "{{.OPENAPI_CODEGEN_VERSION}}"
+    vars:
+      API_VERSION:
+        sh: yq '.info.version' ./{{.API_SPEC}}.yaml
+      PACKAGE_NAME:
+        sh: echo "{{.TARGET}}" | tr '-' '_'
+    cmds:
+    - |
+      java -DmaxYamlCodePoints=99999999 \
+           -Dverbose=false \
+           -jar ./lib/openapi-generator-cli-{{.OPENAPI_CODEGEN_VERSION}}.jar \
+           generate \
+           --skip-validate-spec \
+           --input-spec ./{{.API_SPEC}}.yaml \
+           --generator-name {{.GENERATOR_NAME}} \
+           --additional-properties=packageName={{.PACKAGE_NAME}},packageVersion={{.API_VERSION}},projectName={{.API_SPEC}},enablePostProcessFile=false,verbose=false \
+           --output {{.TARGET}}
+
+  build:
+    desc: Builds the OGC API - Processes javascript client.
+    deps:
+    - task: download_ogcapi-processes
+    cmds:
+    - task: openapi_generator
+      vars:
+        API_SPEC: ogcapi-processes
+        GENERATOR_NAME: python
+        TARGET: ogcapi-processes-client
