@@ -57,4 +57,4 @@ files = [
   "tests", # hand-written tests
 ]
 warn_unused_configs = true
-warn_redundant_cast
+warn_redundant_cast = true
