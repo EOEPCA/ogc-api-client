@@ -25,14 +25,14 @@ jobs:
     - name: Install dependencies
       run: |
         pip install hatch
-    # - name: Cache Hatch
-    #   id: cache-hatch
-    #   uses: actions/cache@v3
-    #   with:
-    #     path: /home/runner/.local/share/hatch/env/virtual/
-    #     key: ${{ runner.os }}-hatch
+    - name: Cache Hatch
+      id: cache-hatch
+      uses: actions/cache@v3
+      with:
+        path: /home/runner/.local/share/hatch/env/virtual/
+        key: ${{ runner.os }}-hatch
     - name: Build package
-      run: hatch build
+      run: cd src/ogcapi_processes_client && hatch build
     - name: Publish package distributions to PyPI (main)
       if: github.ref == 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
