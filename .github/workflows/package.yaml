@@ -32,7 +32,7 @@ jobs:
         path: /home/runner/.local/share/hatch/env/virtual/
         key: ${{ runner.os }}-hatch
     - name: Build package
-      run: cd src && hatch build
+      run: cd src && hatch build && ls -la && mv dist ../ && ls -la ../
     - name: Publish package distributions to PyPI (main)
       if: github.ref == 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
