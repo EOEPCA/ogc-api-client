@@ -14,7 +14,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: release
+    #environment: release
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
@@ -24,7 +24,7 @@ jobs:
         cache: 'pip'
     - name: Install dependencies
       run: |
-        pip install hatch
+        pip install hatch twine
     - name: Cache Hatch
       id: cache-hatch
       uses: actions/cache@v3
@@ -32,7 +32,10 @@ jobs:
         path: /home/runner/.local/share/hatch/env/virtual/
         key: ${{ runner.os }}-hatch
     - name: Build package
-      run: cd src && hatch build && ls -la && mv dist ../ && ls -la ../
+      run: | 
+        cd src && hatch build && ls -la && mv dist ../ && ls -la ../
+        cd ../
+        twine check dist/*
     - name: Publish package distributions to PyPI (main)
       if: github.ref == 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
