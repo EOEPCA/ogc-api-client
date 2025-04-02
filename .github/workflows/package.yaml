@@ -14,7 +14,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    #environment: release
+    environment: release
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
@@ -37,7 +37,8 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        repository-url: https://upload.pypi.org/legacy/
+        #reverto to upload.pypi after test 
+        repository-url: https://test.pypi.org/legacy/
     - name: Publish package distributions to PyPI (non-main)
       if: github.ref != 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
