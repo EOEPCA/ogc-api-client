@@ -40,10 +40,12 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
+        verbose: true
         #reverto to upload.pypi after test 
         repository-url: https://test.pypi.org/legacy/
     - name: Publish package distributions to PyPI (non-main)
       if: github.ref != 'refs/heads/main'
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
+        verbose: true
         repository-url: https://test.pypi.org/legacy/
