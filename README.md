@@ -151,6 +151,6 @@ Endpoints do not require authorization.
 
 ## Author
 
-standards-team@ogc.org
+Terradue Srl. — [www.terradue.com](https://www.terradue.com)
 
 
