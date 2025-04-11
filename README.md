@@ -16,7 +16,13 @@ Python 3.8+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
+Install the python package from the PyPI repository using the followig command:
+
+```sh
+pip install ogc-api-client
+```
+
+If the python package is hosted on a Git repository, you can install directly using:
 
 ```sh
 pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
