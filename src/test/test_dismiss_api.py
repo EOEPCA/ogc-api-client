@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.dismiss_api import DismissApi
+from ogc_api_client.api.dismiss_api import DismissApi
 
 
 class TestDismissApi(unittest.TestCase):

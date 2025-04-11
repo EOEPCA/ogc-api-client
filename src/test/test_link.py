@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.link import Link
+from ogc_api_client.models.link import Link
 
 class TestLink(unittest.TestCase):
     """Link unit test stubs"""

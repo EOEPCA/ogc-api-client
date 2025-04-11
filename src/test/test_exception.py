@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.exception import Exception
+from ogc_api_client.models.exception import Exception
 
 class TestException(unittest.TestCase):
     """Exception unit test stubs"""

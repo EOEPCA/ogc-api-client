@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.process_summary import ProcessSummary
+from ogc_api_client.models.process_summary import ProcessSummary
 
 class TestProcessSummary(unittest.TestCase):
     """ProcessSummary unit test stubs"""
@@ -42,7 +42,7 @@ class TestProcessSummary(unittest.TestCase):
                     ''
                     ],
                 metadata = [
-                    ogcapi_processes_client.models.metadata.metadata(
+                    ogc_api_client.models.metadata.metadata(
                         title = '', 
                         role = '', 
                         href = '', )
@@ -57,7 +57,7 @@ class TestProcessSummary(unittest.TestCase):
                     'value'
                     ],
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 

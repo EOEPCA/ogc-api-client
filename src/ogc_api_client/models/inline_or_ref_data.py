@@ -18,9 +18,9 @@ import json
 import pprint
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Any, List, Optional
-from ogcapi_processes_client.models.input_value_no_object import InputValueNoObject
-from ogcapi_processes_client.models.link import Link
-from ogcapi_processes_client.models.qualified_input_value import QualifiedInputValue
+from ogc_api_client.models.input_value_no_object import InputValueNoObject
+from ogc_api_client.models.link import Link
+from ogc_api_client.models.qualified_input_value import QualifiedInputValue
 from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self

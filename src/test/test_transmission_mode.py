@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.transmission_mode import TransmissionMode
+from ogc_api_client.models.transmission_mode import TransmissionMode
 
 class TestTransmissionMode(unittest.TestCase):
     """TransmissionMode unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.landing_page import LandingPage
+from ogc_api_client.models.landing_page import LandingPage
 
 # TODO update the JSON string below
 json = "{}"

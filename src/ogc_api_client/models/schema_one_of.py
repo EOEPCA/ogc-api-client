@@ -216,8 +216,8 @@ class SchemaOneOf(BaseModel):
         })
         return _obj
 
-from ogcapi_processes_client.models.schema_one_of_additional_properties import SchemaOneOfAdditionalProperties
-from ogcapi_processes_client.models.schema_one_of_not import SchemaOneOfNot
+from ogc_api_client.models.schema_one_of_additional_properties import SchemaOneOfAdditionalProperties
+from ogc_api_client.models.schema_one_of_not import SchemaOneOfNot
 # TODO: Rewrite to not use raise_errors
 SchemaOneOf.model_rebuild(raise_errors=False)
 

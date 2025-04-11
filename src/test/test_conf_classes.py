@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.conf_classes import ConfClasses
+from ogc_api_client.models.conf_classes import ConfClasses
 
 class TestConfClasses(unittest.TestCase):
     """ConfClasses unit test stubs"""

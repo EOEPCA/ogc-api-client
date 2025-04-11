@@ -1,4 +1,4 @@
-# ogcapi_processes_client.ExecuteApi
+# ogc_api_client.ExecuteApi
 
 All URIs are relative to *http://example.org/ogc*
 
@@ -21,25 +21,25 @@ For more information, see [Section 7.11](https://docs.ogc.org/is/18-062r2/18-062
 
 
 ```python
-import ogcapi_processes_client
-from ogcapi_processes_client.models.execute import Execute
-from ogcapi_processes_client.models.execute200_response import Execute200Response
-from ogcapi_processes_client.rest import ApiException
+import ogc_api_client
+from ogc_api_client.models.execute import Execute
+from ogc_api_client.models.execute200_response import Execute200Response
+from ogc_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://example.org/ogc
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ogcapi_processes_client.Configuration(
+configuration = ogc_api_client.Configuration(
     host = "http://example.org/ogc"
 )
 
 
 # Enter a context with an instance of the API client
-with ogcapi_processes_client.ApiClient(configuration) as api_client:
+with ogc_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ogcapi_processes_client.ExecuteApi(api_client)
+    api_instance = ogc_api_client.ExecuteApi(api_client)
     process_id = 'process_id_example' # str | 
-    execute = ogcapi_processes_client.Execute() # Execute | Mandatory execute request JSON
+    execute = ogc_api_client.Execute() # Execute | Mandatory execute request JSON
 
     try:
         # execute a process.

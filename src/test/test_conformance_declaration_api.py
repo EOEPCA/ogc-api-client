@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.conformance_declaration_api import ConformanceDeclarationApi
+from ogc_api_client.api.conformance_declaration_api import ConformanceDeclarationApi
 
 
 class TestConformanceDeclarationApi(unittest.TestCase):

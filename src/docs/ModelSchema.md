@@ -45,7 +45,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.model_schema import ModelSchema
+from ogc_api_client.models.model_schema import ModelSchema
 
 # TODO update the JSON string below
 json = "{}"

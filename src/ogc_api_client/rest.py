@@ -20,7 +20,7 @@ import ssl
 
 import urllib3
 
-from ogcapi_processes_client.exceptions import ApiException, ApiValueError
+from ogc_api_client.exceptions import ApiException, ApiValueError
 
 SUPPORTED_SOCKS_PROXIES = {"socks5", "socks5h", "socks4", "socks4a"}
 RESTResponseType = urllib3.HTTPResponse

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.format import Format
+from ogc_api_client.models.format import Format
 
 class TestFormat(unittest.TestCase):
     """Format unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.schema_one_of import SchemaOneOf
+from ogc_api_client.models.schema_one_of import SchemaOneOf
 
 class TestSchemaOneOf(unittest.TestCase):
     """SchemaOneOf unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.subscriber import Subscriber
+from ogc_api_client.models.subscriber import Subscriber
 
 class TestSubscriber(unittest.TestCase):
     """Subscriber unit test stubs"""

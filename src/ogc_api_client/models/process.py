@@ -20,13 +20,13 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from ogcapi_processes_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
-from ogcapi_processes_client.models.input_description import InputDescription
-from ogcapi_processes_client.models.job_control_options import JobControlOptions
-from ogcapi_processes_client.models.link import Link
-from ogcapi_processes_client.models.metadata import Metadata
-from ogcapi_processes_client.models.output_description import OutputDescription
-from ogcapi_processes_client.models.transmission_mode import TransmissionMode
+from ogc_api_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
+from ogc_api_client.models.input_description import InputDescription
+from ogc_api_client.models.job_control_options import JobControlOptions
+from ogc_api_client.models.link import Link
+from ogc_api_client.models.metadata import Metadata
+from ogc_api_client.models.output_description import OutputDescription
+from ogc_api_client.models.transmission_mode import TransmissionMode
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
+from ogc_api_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
 
 # TODO update the JSON string below
 json = "{}"

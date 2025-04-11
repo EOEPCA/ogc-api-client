@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
+from ogc_api_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
 
 class TestInputDescriptionAllOfMaxOccurs(unittest.TestCase):
     """InputDescriptionAllOfMaxOccurs unit test stubs"""

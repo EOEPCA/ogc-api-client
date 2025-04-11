@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.process_description_api import ProcessDescriptionApi
+from ogc_api_client.api.process_description_api import ProcessDescriptionApi
 
 
 class TestProcessDescriptionApi(unittest.TestCase):

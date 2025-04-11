@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from ogcapi_processes_client.models.format import Format
-from ogcapi_processes_client.models.transmission_mode import TransmissionMode
+from ogc_api_client.models.format import Format
+from ogc_api_client.models.transmission_mode import TransmissionMode
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.conf_classes import ConfClasses
+from ogc_api_client.models.conf_classes import ConfClasses
 
 # TODO update the JSON string below
 json = "{}"

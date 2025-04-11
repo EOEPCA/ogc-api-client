@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.input_value_no_object import InputValueNoObject
+from ogc_api_client.models.input_value_no_object import InputValueNoObject
 
 class TestInputValueNoObject(unittest.TestCase):
     """InputValueNoObject unit test stubs"""

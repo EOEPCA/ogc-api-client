@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.job_control_options import JobControlOptions
+from ogc_api_client.models.job_control_options import JobControlOptions
 
 class TestJobControlOptions(unittest.TestCase):
     """JobControlOptions unit test stubs"""

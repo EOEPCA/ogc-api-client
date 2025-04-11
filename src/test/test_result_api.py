@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.result_api import ResultApi
+from ogc_api_client.api.result_api import ResultApi
 
 
 class TestResultApi(unittest.TestCase):

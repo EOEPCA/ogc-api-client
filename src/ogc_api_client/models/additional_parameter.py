@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List
-from ogcapi_processes_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
+from ogc_api_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
 from typing import Optional, Set
 from typing_extensions import Self
 

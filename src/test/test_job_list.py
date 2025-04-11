@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.job_list import JobList
+from ogc_api_client.models.job_list import JobList
 
 class TestJobList(unittest.TestCase):
     """JobList unit test stubs"""
@@ -37,7 +37,7 @@ class TestJobList(unittest.TestCase):
         if include_optional:
             return JobList(
                 jobs = [
-                    ogcapi_processes_client.models.status_info.statusInfo(
+                    ogc_api_client.models.status_info.statusInfo(
                         process_id = '', 
                         type = 'process', 
                         job_id = '', 
@@ -49,7 +49,7 @@ class TestJobList(unittest.TestCase):
                         updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         progress = 0, 
                         links = [
-                            ogcapi_processes_client.models.link.link(
+                            ogc_api_client.models.link.link(
                                 href = '', 
                                 rel = 'service', 
                                 type = 'application/json', 
@@ -58,7 +58,7 @@ class TestJobList(unittest.TestCase):
                             ], )
                     ],
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 
@@ -69,7 +69,7 @@ class TestJobList(unittest.TestCase):
         else:
             return JobList(
                 jobs = [
-                    ogcapi_processes_client.models.status_info.statusInfo(
+                    ogc_api_client.models.status_info.statusInfo(
                         process_id = '', 
                         type = 'process', 
                         job_id = '', 
@@ -81,7 +81,7 @@ class TestJobList(unittest.TestCase):
                         updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         progress = 0, 
                         links = [
-                            ogcapi_processes_client.models.link.link(
+                            ogc_api_client.models.link.link(
                                 href = '', 
                                 rel = 'service', 
                                 type = 'application/json', 
@@ -90,7 +90,7 @@ class TestJobList(unittest.TestCase):
                             ], )
                     ],
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 

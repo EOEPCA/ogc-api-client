@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.process_list import ProcessList
+from ogc_api_client.models.process_list import ProcessList
 
 class TestProcessList(unittest.TestCase):
     """ProcessList unit test stubs"""
@@ -40,7 +40,7 @@ class TestProcessList(unittest.TestCase):
                     null
                     ],
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 
@@ -54,7 +54,7 @@ class TestProcessList(unittest.TestCase):
                     null
                     ],
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 

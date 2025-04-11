@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.qualified_input_value import QualifiedInputValue
+from ogc_api_client.models.qualified_input_value import QualifiedInputValue
 
 # TODO update the JSON string below
 json = "{}"

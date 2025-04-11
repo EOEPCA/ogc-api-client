@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
+from ogc_api_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
 
 # TODO update the JSON string below
 json = "{}"

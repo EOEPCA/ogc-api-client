@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.bbox import Bbox
+from ogc_api_client.models.bbox import Bbox
 
 class TestBbox(unittest.TestCase):
     """Bbox unit test stubs"""

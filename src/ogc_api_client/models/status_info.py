@@ -22,8 +22,8 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from ogcapi_processes_client.models.link import Link
-from ogcapi_processes_client.models.status_code import StatusCode
+from ogc_api_client.models.link import Link
+from ogc_api_client.models.status_code import StatusCode
 from typing import Optional, Set
 from typing_extensions import Self
 

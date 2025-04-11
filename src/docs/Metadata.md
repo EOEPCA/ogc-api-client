@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.metadata import Metadata
+from ogc_api_client.models.metadata import Metadata
 
 # TODO update the JSON string below
 json = "{}"

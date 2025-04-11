@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.output_description import OutputDescription
+from ogc_api_client.models.output_description import OutputDescription
 
 class TestOutputDescription(unittest.TestCase):
     """OutputDescription unit test stubs"""
@@ -42,7 +42,7 @@ class TestOutputDescription(unittest.TestCase):
                     ''
                     ],
                 metadata = [
-                    ogcapi_processes_client.models.metadata.metadata(
+                    ogc_api_client.models.metadata.metadata(
                         title = '', 
                         role = '', 
                         href = '', )

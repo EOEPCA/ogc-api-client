@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
+from ogc_api_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
 
 class TestDescriptionTypeAdditionalParameters(unittest.TestCase):
     """DescriptionTypeAdditionalParameters unit test stubs"""
@@ -40,7 +40,7 @@ class TestDescriptionTypeAdditionalParameters(unittest.TestCase):
                 role = '',
                 href = '',
                 parameters = [
-                    ogcapi_processes_client.models.additional_parameter.additionalParameter(
+                    ogc_api_client.models.additional_parameter.additionalParameter(
                         name = '', 
                         value = [
                             null

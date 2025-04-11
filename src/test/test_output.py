@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.output import Output
+from ogc_api_client.models.output import Output
 
 class TestOutput(unittest.TestCase):
     """Output unit test stubs"""
@@ -36,7 +36,7 @@ class TestOutput(unittest.TestCase):
         model = Output()
         if include_optional:
             return Output(
-                format = ogcapi_processes_client.models.format.format(
+                format = ogc_api_client.models.format.format(
                     media_type = '', 
                     encoding = '', 
                     schema = null, ),
