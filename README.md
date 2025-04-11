@@ -151,6 +151,6 @@ Endpoints do not require authorization.
 
 ## Author
 
-Terradue Srl. [www.terradue.com](https://www.terradue.com)
+Terradue Srl. — [www.terradue.com](https://www.terradue.com)
 
 
