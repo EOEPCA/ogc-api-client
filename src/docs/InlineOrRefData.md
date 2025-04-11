@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.inline_or_ref_data import InlineOrRefData
+from ogc_api_client.models.inline_or_ref_data import InlineOrRefData
 
 # TODO update the JSON string below
 json = "{}"

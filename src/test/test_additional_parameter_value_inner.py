@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
+from ogc_api_client.models.additional_parameter_value_inner import AdditionalParameterValueInner
 
 class TestAdditionalParameterValueInner(unittest.TestCase):
     """AdditionalParameterValueInner unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.execute import Execute
+from ogc_api_client.models.execute import Execute
 
 class TestExecute(unittest.TestCase):
     """Execute unit test stubs"""
@@ -40,15 +40,15 @@ class TestExecute(unittest.TestCase):
                     'key' : null
                     },
                 outputs = {
-                    'key' : ogcapi_processes_client.models.output.output(
-                        format = ogcapi_processes_client.models.format.format(
+                    'key' : ogc_api_client.models.output.output(
+                        format = ogc_api_client.models.format.format(
                             media_type = '', 
                             encoding = '', 
                             schema = null, ), 
                         transmission_mode = 'value', )
                     },
                 response = 'raw',
-                subscriber = ogcapi_processes_client.models.subscriber.subscriber(
+                subscriber = ogc_api_client.models.subscriber.subscriber(
                     success_uri = '', 
                     in_progress_uri = '', 
                     failed_uri = '', )

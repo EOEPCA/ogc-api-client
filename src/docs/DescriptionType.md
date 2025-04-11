@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.description_type import DescriptionType
+from ogc_api_client.models.description_type import DescriptionType
 
 # TODO update the JSON string below
 json = "{}"

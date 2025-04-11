@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.format_schema import FormatSchema
+from ogc_api_client.models.format_schema import FormatSchema
 
 class TestFormatSchema(unittest.TestCase):
     """FormatSchema unit test stubs"""

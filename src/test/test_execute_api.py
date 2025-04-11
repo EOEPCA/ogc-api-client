@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.execute_api import ExecuteApi
+from ogc_api_client.api.execute_api import ExecuteApi
 
 
 class TestExecuteApi(unittest.TestCase):

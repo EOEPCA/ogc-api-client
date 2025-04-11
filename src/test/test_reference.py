@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.reference import Reference
+from ogc_api_client.models.reference import Reference
 
 class TestReference(unittest.TestCase):
     """Reference unit test stubs"""

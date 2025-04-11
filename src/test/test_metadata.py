@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.metadata import Metadata
+from ogc_api_client.models.metadata import Metadata
 
 class TestMetadata(unittest.TestCase):
     """Metadata unit test stubs"""

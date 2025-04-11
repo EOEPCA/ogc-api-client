@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.status_info import StatusInfo
+from ogc_api_client.models.status_info import StatusInfo
 
 class TestStatusInfo(unittest.TestCase):
     """StatusInfo unit test stubs"""
@@ -47,7 +47,7 @@ class TestStatusInfo(unittest.TestCase):
                 updated = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 progress = 0,
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.status_code import StatusCode
+from ogc_api_client.models.status_code import StatusCode
 
 class TestStatusCode(unittest.TestCase):
     """StatusCode unit test stubs"""

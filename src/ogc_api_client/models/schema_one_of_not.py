@@ -18,7 +18,7 @@ import json
 import pprint
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Any, List, Optional
-from ogcapi_processes_client.models.reference import Reference
+from ogc_api_client.models.reference import Reference
 from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self
@@ -134,7 +134,7 @@ class SchemaOneOfNot(BaseModel):
         """Returns the string representation of the actual instance"""
         return pprint.pformat(self.model_dump())
 
-from ogcapi_processes_client.models.model_schema import ModelSchema
+from ogc_api_client.models.model_schema import ModelSchema
 # TODO: Rewrite to not use raise_errors
 SchemaOneOfNot.model_rebuild(raise_errors=False)
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.inline_or_ref_data import InlineOrRefData
+from ogc_api_client.models.inline_or_ref_data import InlineOrRefData
 
 class TestInlineOrRefData(unittest.TestCase):
     """InlineOrRefData unit test stubs"""

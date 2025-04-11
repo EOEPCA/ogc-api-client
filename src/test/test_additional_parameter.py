@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.additional_parameter import AdditionalParameter
+from ogc_api_client.models.additional_parameter import AdditionalParameter
 
 class TestAdditionalParameter(unittest.TestCase):
     """AdditionalParameter unit test stubs"""

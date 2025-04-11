@@ -27,11 +27,11 @@ from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
-from ogcapi_processes_client.configuration import Configuration
-from ogcapi_processes_client.api_response import ApiResponse, T as ApiResponseT
-import ogcapi_processes_client.models
-from ogcapi_processes_client import rest
-from ogcapi_processes_client.exceptions import (
+from ogc_api_client.configuration import Configuration
+from ogc_api_client.api_response import ApiResponse, T as ApiResponseT
+import ogc_api_client.models
+from ogc_api_client import rest
+from ogc_api_client.exceptions import (
     ApiValueError,
     ApiException,
     BadRequestException,
@@ -450,7 +450,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(ogcapi_processes_client.models, klass)
+                klass = getattr(ogc_api_client.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

@@ -17,11 +17,11 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from ogcapi_processes_client.models.job_list import JobList
+from ogc_api_client.models.job_list import JobList
 
-from ogcapi_processes_client.api_client import ApiClient, RequestSerialized
-from ogcapi_processes_client.api_response import ApiResponse
-from ogcapi_processes_client.rest import RESTResponseType
+from ogc_api_client.api_client import ApiClient, RequestSerialized
+from ogc_api_client.api_response import ApiResponse
+from ogc_api_client.rest import RESTResponseType
 
 
 class JobListApi:

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.execute import Execute
+from ogc_api_client.models.execute import Execute
 
 # TODO update the JSON string below
 json = "{}"

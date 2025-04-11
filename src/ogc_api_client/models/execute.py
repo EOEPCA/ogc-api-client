@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from ogcapi_processes_client.models.execute_inputs_value import ExecuteInputsValue
-from ogcapi_processes_client.models.output import Output
-from ogcapi_processes_client.models.subscriber import Subscriber
+from ogc_api_client.models.execute_inputs_value import ExecuteInputsValue
+from ogc_api_client.models.output import Output
+from ogc_api_client.models.subscriber import Subscriber
 from typing import Optional, Set
 from typing_extensions import Self
 

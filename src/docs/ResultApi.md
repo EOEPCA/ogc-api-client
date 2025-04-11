@@ -1,4 +1,4 @@
-# ogcapi_processes_client.ResultApi
+# ogc_api_client.ResultApi
 
 All URIs are relative to *http://example.org/ogc*
 
@@ -21,22 +21,22 @@ For more information, see [Section 7.13](https://docs.ogc.org/is/18-062r2/18-062
 
 
 ```python
-import ogcapi_processes_client
-from ogcapi_processes_client.models.inline_or_ref_data import InlineOrRefData
-from ogcapi_processes_client.rest import ApiException
+import ogc_api_client
+from ogc_api_client.models.inline_or_ref_data import InlineOrRefData
+from ogc_api_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://example.org/ogc
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ogcapi_processes_client.Configuration(
+configuration = ogc_api_client.Configuration(
     host = "http://example.org/ogc"
 )
 
 
 # Enter a context with an instance of the API client
-with ogcapi_processes_client.ApiClient(configuration) as api_client:
+with ogc_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ogcapi_processes_client.ResultApi(api_client)
+    api_instance = ogc_api_client.ResultApi(api_client)
     job_id = 'job_id_example' # str | local identifier of a job
 
     try:

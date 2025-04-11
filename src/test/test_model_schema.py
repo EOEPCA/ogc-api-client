@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.model_schema import ModelSchema
+from ogc_api_client.models.model_schema import ModelSchema
 
 class TestModelSchema(unittest.TestCase):
     """ModelSchema unit test stubs"""
@@ -75,11 +75,11 @@ class TestModelSchema(unittest.TestCase):
                 additional_properties = None,
                 description = '',
                 format = '',
-                default = ogcapi_processes_client.models.default.default(),
+                default = ogc_api_client.models.default.default(),
                 nullable = True,
                 read_only = True,
                 write_only = True,
-                example = ogcapi_processes_client.models.example.example(),
+                example = ogc_api_client.models.example.example(),
                 deprecated = True,
                 content_media_type = '',
                 content_encoding = '',

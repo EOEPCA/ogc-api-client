@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.qualified_input_value import QualifiedInputValue
+from ogc_api_client.models.qualified_input_value import QualifiedInputValue
 
 class TestQualifiedInputValue(unittest.TestCase):
     """QualifiedInputValue unit test stubs"""

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.description_type import DescriptionType
+from ogc_api_client.models.description_type import DescriptionType
 
 class TestDescriptionType(unittest.TestCase):
     """DescriptionType unit test stubs"""
@@ -42,7 +42,7 @@ class TestDescriptionType(unittest.TestCase):
                     ''
                     ],
                 metadata = [
-                    ogcapi_processes_client.models.metadata.metadata(
+                    ogc_api_client.models.metadata.metadata(
                         title = '', 
                         role = '', 
                         href = '', )

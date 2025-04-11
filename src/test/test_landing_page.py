@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.landing_page import LandingPage
+from ogc_api_client.models.landing_page import LandingPage
 
 class TestLandingPage(unittest.TestCase):
     """LandingPage unit test stubs"""
@@ -39,7 +39,7 @@ class TestLandingPage(unittest.TestCase):
                 title = 'Example processing server',
                 description = 'Example server implementing the OGC API - Processes 1.0 Standard',
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 
@@ -50,7 +50,7 @@ class TestLandingPage(unittest.TestCase):
         else:
             return LandingPage(
                 links = [
-                    ogcapi_processes_client.models.link.link(
+                    ogc_api_client.models.link.link(
                         href = '', 
                         rel = 'service', 
                         type = 'application/json', 

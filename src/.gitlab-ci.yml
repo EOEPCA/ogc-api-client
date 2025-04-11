@@ -41,7 +41,7 @@ test:
   - pip install hatch
   script: 
   - |
-    cd src/ogcapi_processes_client
+    cd src/ogc_api_client
     hatch run default:test && exit 0 || exit 1
 
 package:
@@ -64,7 +64,7 @@ package:
   - hatch build # Build package with hatch
   # Upload to the GitLab PyPI registry and check the pull
   - |
-      cd src/ogcapi_processes_client
+      cd src/ogc_api_client
       APP_VERSION=$( yq .project.version -oy  pyproject.toml )
       APP_NAME=$( yq .project.name -oy  pyproject.toml )
       if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then

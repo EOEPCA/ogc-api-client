@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.additional_parameter import AdditionalParameter
+from ogc_api_client.models.additional_parameter import AdditionalParameter
 
 # TODO update the JSON string below
 json = "{}"

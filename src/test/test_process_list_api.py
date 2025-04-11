@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.process_list_api import ProcessListApi
+from ogc_api_client.api.process_list_api import ProcessListApi
 
 
 class TestProcessListApi(unittest.TestCase):

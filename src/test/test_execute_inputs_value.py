@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.execute_inputs_value import ExecuteInputsValue
+from ogc_api_client.models.execute_inputs_value import ExecuteInputsValue
 
 class TestExecuteInputsValue(unittest.TestCase):
     """ExecuteInputsValue unit test stubs"""

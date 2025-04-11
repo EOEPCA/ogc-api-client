@@ -18,10 +18,10 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List
-from ogcapi_processes_client.models.link import Link
-from ogcapi_processes_client.models.process_summary import ProcessSummary
+from ogc_api_client.models.link import Link
+from ogc_api_client.models.process_summary import ProcessSummary
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +31,8 @@ class ProcessList(BaseModel):
     """ # noqa: E501
     processes: List[ProcessSummary]
     links: List[Link]
-    __properties: ClassVar[List[str]] = ["processes", "links"]
+    number_total: Optional[int] = Field(default=None, alias="numberTotal")
+    __properties: ClassVar[List[str]] = ["processes", "links", "numberTotal"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -99,7 +100,8 @@ class ProcessList(BaseModel):
 
         _obj = cls.model_validate({
             "processes": [ProcessSummary.from_dict(_item) for _item in obj["processes"]] if obj.get("processes") is not None else None,
-            "links": [Link.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None
+            "links": [Link.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None,
+            "numberTotal": obj.get("numberTotal"),
         })
         return _obj
 

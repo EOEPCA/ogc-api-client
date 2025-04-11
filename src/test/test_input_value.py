@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.input_value import InputValue
+from ogc_api_client.models.input_value import InputValue
 
 class TestInputValue(unittest.TestCase):
     """InputValue unit test stubs"""

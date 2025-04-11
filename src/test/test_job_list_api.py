@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.job_list_api import JobListApi
+from ogc_api_client.api.job_list_api import JobListApi
 
 
 class TestJobListApi(unittest.TestCase):

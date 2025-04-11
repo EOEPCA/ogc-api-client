@@ -45,7 +45,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.schema_one_of_not import SchemaOneOfNot
+from ogc_api_client.models.schema_one_of_not import SchemaOneOfNot
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.status_api import StatusApi
+from ogc_api_client.api.status_api import StatusApi
 
 
 class TestStatusApi(unittest.TestCase):

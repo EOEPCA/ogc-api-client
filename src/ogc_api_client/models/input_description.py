@@ -20,10 +20,10 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from ogcapi_processes_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
-from ogcapi_processes_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
-from ogcapi_processes_client.models.metadata import Metadata
-from ogcapi_processes_client.models.model_schema import ModelSchema
+from ogc_api_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
+from ogc_api_client.models.input_description_all_of_max_occurs import InputDescriptionAllOfMaxOccurs
+from ogc_api_client.models.metadata import Metadata
+from ogc_api_client.models.model_schema import ModelSchema
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.api.capabilities_api import CapabilitiesApi
+from ogc_api_client.api.capabilities_api import CapabilitiesApi
 
 
 class TestCapabilitiesApi(unittest.TestCase):

@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from ogcapi_processes_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
-from ogcapi_processes_client.models.metadata import Metadata
+from ogc_api_client.models.description_type_additional_parameters import DescriptionTypeAdditionalParameters
+from ogc_api_client.models.metadata import Metadata
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from ogcapi_processes_client.models.link import Link
+from ogc_api_client.models.link import Link
 
 # TODO update the JSON string below
 json = "{}"

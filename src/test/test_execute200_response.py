@@ -15,7 +15,7 @@
 
 import unittest
 
-from ogcapi_processes_client.models.execute200_response import Execute200Response
+from ogc_api_client.models.execute200_response import Execute200Response
 
 class TestExecute200Response(unittest.TestCase):
     """Execute200Response unit test stubs"""
