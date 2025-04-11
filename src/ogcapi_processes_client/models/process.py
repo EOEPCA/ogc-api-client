@@ -41,12 +41,13 @@ class Process(BaseModel):
     additional_parameters: Optional[DescriptionTypeAdditionalParameters] = Field(default=None, alias="additionalParameters")
     id: StrictStr
     version: StrictStr
+    mutable: bool = True
     job_control_options: Optional[List[JobControlOptions]] = Field(default=None, alias="jobControlOptions")
     output_transmission: Optional[List[TransmissionMode]] = Field(default=None, alias="outputTransmission")
     links: Optional[List[Link]] = None
     inputs: Optional[Dict[str, InputDescription]] = None
     outputs: Optional[Dict[str, OutputDescription]] = None
-    __properties: ClassVar[List[str]] = ["title", "description", "keywords", "metadata", "additionalParameters", "id", "version", "jobControlOptions", "outputTransmission", "links", "inputs", "outputs"]
+    __properties: ClassVar[List[str]] = ["title", "description", "keywords", "metadata", "additionalParameters", "id", "version", "mutable", "jobControlOptions", "outputTransmission", "links", "inputs", "outputs"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -137,6 +138,7 @@ class Process(BaseModel):
             "additionalParameters": DescriptionTypeAdditionalParameters.from_dict(obj["additionalParameters"]) if obj.get("additionalParameters") is not None else None,
             "id": obj.get("id"),
             "version": obj.get("version"),
+            "mutable": obj.get("mutable"),
             "jobControlOptions": obj.get("jobControlOptions"),
             "outputTransmission": obj.get("outputTransmission"),
             "links": [Link.from_dict(_item) for _item in obj["links"]] if obj.get("links") is not None else None,
