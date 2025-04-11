@@ -91,56 +91,56 @@ All URIs are relative to *http://example.org/ogc*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CapabilitiesApi* | [**get_landing_page**](docs/CapabilitiesApi.md#get_landing_page) | **GET** / | landing page of this API
-*ConformanceDeclarationApi* | [**get_conformance_classes**](docs/ConformanceDeclarationApi.md#get_conformance_classes) | **GET** /conformance | information about standards that this API conforms to
-*DismissApi* | [**dismiss**](docs/DismissApi.md#dismiss) | **DELETE** /jobs/{jobId} | cancel a job execution, remove a finished job
-*ExecuteApi* | [**execute**](docs/ExecuteApi.md#execute) | **POST** /processes/{processID}/execution | execute a process.
-*JobListApi* | [**get_jobs**](docs/JobListApi.md#get_jobs) | **GET** /jobs | retrieve the list of jobs.
-*ProcessDescriptionApi* | [**get_process_description**](docs/ProcessDescriptionApi.md#get_process_description) | **GET** /processes/{processID} | retrieve a process description
-*ProcessListApi* | [**get_processes**](docs/ProcessListApi.md#get_processes) | **GET** /processes | retrieve the list of available processes
-*ResultApi* | [**get_result**](docs/ResultApi.md#get_result) | **GET** /jobs/{jobId}/results | retrieve the result(s) of a job
-*StatusApi* | [**get_status**](docs/StatusApi.md#get_status) | **GET** /jobs/{jobId} | retrieve the status of a job
+*CapabilitiesApi* | [**get_landing_page**](src/docs/CapabilitiesApi.md#get_landing_page) | **GET** / | landing page of this API
+*ConformanceDeclarationApi* | [**get_conformance_classes**](src/docs/ConformanceDeclarationApi.md#get_conformance_classes) | **GET** /conformance | information about standards that this API conforms to
+*DismissApi* | [**dismiss**](src/docs/DismissApi.md#dismiss) | **DELETE** /jobs/{jobId} | cancel a job execution, remove a finished job
+*ExecuteApi* | [**execute**](src/docs/ExecuteApi.md#execute) | **POST** /processes/{processID}/execution | execute a process.
+*JobListApi* | [**get_jobs**](src/docs/JobListApi.md#get_jobs) | **GET** /jobs | retrieve the list of jobs.
+*ProcessDescriptionApi* | [**get_process_description**](src/docs/ProcessDescriptionApi.md#get_process_description) | **GET** /processes/{processID} | retrieve a process description
+*ProcessListApi* | [**get_processes**](src/docs/ProcessListApi.md#get_processes) | **GET** /processes | retrieve the list of available processes
+*ResultApi* | [**get_result**](src/docs/ResultApi.md#get_result) | **GET** /jobs/{jobId}/results | retrieve the result(s) of a job
+*StatusApi* | [**get_status**](src/docs/StatusApi.md#get_status) | **GET** /jobs/{jobId} | retrieve the status of a job
 
 
 ## Documentation For Models
 
- - [AdditionalParameter](docs/AdditionalParameter.md)
- - [AdditionalParameterValueInner](docs/AdditionalParameterValueInner.md)
- - [Bbox](docs/Bbox.md)
- - [ConfClasses](docs/ConfClasses.md)
- - [DescriptionType](docs/DescriptionType.md)
- - [DescriptionTypeAdditionalParameters](docs/DescriptionTypeAdditionalParameters.md)
- - [Exception](docs/Exception.md)
- - [Execute](docs/Execute.md)
- - [Execute200Response](docs/Execute200Response.md)
- - [ExecuteInputsValue](docs/ExecuteInputsValue.md)
- - [Format](docs/Format.md)
- - [FormatSchema](docs/FormatSchema.md)
- - [InlineOrRefData](docs/InlineOrRefData.md)
- - [InputDescription](docs/InputDescription.md)
- - [InputDescriptionAllOfMaxOccurs](docs/InputDescriptionAllOfMaxOccurs.md)
- - [InputValue](docs/InputValue.md)
- - [InputValueNoObject](docs/InputValueNoObject.md)
- - [JobControlOptions](docs/JobControlOptions.md)
- - [JobList](docs/JobList.md)
- - [LandingPage](docs/LandingPage.md)
- - [Link](docs/Link.md)
- - [Metadata](docs/Metadata.md)
- - [ModelSchema](docs/ModelSchema.md)
- - [Output](docs/Output.md)
- - [OutputDescription](docs/OutputDescription.md)
- - [Process](docs/Process.md)
- - [ProcessList](docs/ProcessList.md)
- - [ProcessSummary](docs/ProcessSummary.md)
- - [QualifiedInputValue](docs/QualifiedInputValue.md)
- - [Reference](docs/Reference.md)
- - [SchemaOneOf](docs/SchemaOneOf.md)
- - [SchemaOneOfAdditionalProperties](docs/SchemaOneOfAdditionalProperties.md)
- - [SchemaOneOfNot](docs/SchemaOneOfNot.md)
- - [StatusCode](docs/StatusCode.md)
- - [StatusInfo](docs/StatusInfo.md)
- - [Subscriber](docs/Subscriber.md)
- - [TransmissionMode](docs/TransmissionMode.md)
+ - [AdditionalParameter](src/docs/AdditionalParameter.md)
+ - [AdditionalParameterValueInner](src/docs/AdditionalParameterValueInner.md)
+ - [Bbox](src/docs/Bbox.md)
+ - [ConfClasses](src/docs/ConfClasses.md)
+ - [DescriptionType](src/docs/DescriptionType.md)
+ - [DescriptionTypeAdditionalParameters](src/docs/DescriptionTypeAdditionalParameters.md)
+ - [Exception](src/docs/Exception.md)
+ - [Execute](src/docs/Execute.md)
+ - [Execute200Response](src/docs/Execute200Response.md)
+ - [ExecuteInputsValue](src/docs/ExecuteInputsValue.md)
+ - [Format](src/docs/Format.md)
+ - [FormatSchema](src/docs/FormatSchema.md)
+ - [InlineOrRefData](src/docs/InlineOrRefData.md)
+ - [InputDescription](src/docs/InputDescription.md)
+ - [InputDescriptionAllOfMaxOccurs](src/docs/InputDescriptionAllOfMaxOccurs.md)
+ - [InputValue](src/docs/InputValue.md)
+ - [InputValueNoObject](src/docs/InputValueNoObject.md)
+ - [JobControlOptions](src/docs/JobControlOptions.md)
+ - [JobList](src/docs/JobList.md)
+ - [LandingPage](src/docs/LandingPage.md)
+ - [Link](src/docs/Link.md)
+ - [Metadata](src/docs/Metadata.md)
+ - [ModelSchema](src/docs/ModelSchema.md)
+ - [Output](src/docs/Output.md)
+ - [OutputDescription](src/docs/OutputDescription.md)
+ - [Process](src/docs/Process.md)
+ - [ProcessList](src/docs/ProcessList.md)
+ - [ProcessSummary](src/docs/ProcessSummary.md)
+ - [QualifiedInputValue](src/docs/QualifiedInputValue.md)
+ - [Reference](src/docs/Reference.md)
+ - [SchemaOneOf](src/docs/SchemaOneOf.md)
+ - [SchemaOneOfAdditionalProperties](src/docs/SchemaOneOfAdditionalProperties.md)
+ - [SchemaOneOfNot](src/docs/SchemaOneOfNot.md)
+ - [StatusCode](src/docs/StatusCode.md)
+ - [StatusInfo](src/docs/StatusInfo.md)
+ - [Subscriber](src/docs/Subscriber.md)
+ - [TransmissionMode](src/docs/TransmissionMode.md)
 
 
 <a id="documentation-for-authorization"></a>
