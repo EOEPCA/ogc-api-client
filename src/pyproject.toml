@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/EOEPCA/ogc-processes-api-client"
+Repository = "https://github.com/EOEPCA/ogc-api-client"
 
 [tool.hatch.metadata]
 allow-direct-references = true
