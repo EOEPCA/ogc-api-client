@@ -34,15 +34,15 @@ Note that this software is needed only for the server the test environment uses.
 
 **Install *minikube***
 
-Follow the installations instructions from the [official Minikube website](https://minikube.sigs.k8s.io/docs/start/)
+Follow the installations instructions from the [official Minikube website](https://minikube.sigs.k8s.io/docs/start/).
 
 **Install *skaffold***
 
-Follow the installations instructions from the [official Skaffold website](https://skaffold.dev/docs/install/)
+Follow the installations instructions from the [official Skaffold website](https://skaffold.dev/docs/install/).
 
 **Install *helm***
 
-Follow the installations instructions from the [official Helm website](https://helm.sh/docs/intro/install/)
+Follow the installations instructions from the [official Helm website](https://helm.sh/docs/intro/install/).
 
 
 **Add Helm repositories**
