@@ -854,3 +854,8 @@ components:
       required: true
       schema:
         type: string
+  securitySchemes:
+    api_key:
+      in: header
+      name: api_key
+      type: apiKey
