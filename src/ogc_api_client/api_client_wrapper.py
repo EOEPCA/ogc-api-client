@@ -202,8 +202,6 @@ class ApiClientWrapper:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ):
-        print(execute)
-        print(f"{self.api_client.configuration.host}/processes/{process_id}/execution")
         response_data = self.api_client.rest_client.request(
             "POST", f"{self.api_client.configuration.host}/processes/{process_id}/execution",
             headers=_headers,
@@ -355,7 +353,7 @@ class ApiClientWrapper:
         if not self.result_api:
             self.result_api = ResultApi(api_client=self.api_client)
 
-        self.result_api.get_result(
+        return self.result_api.get_result(
             job_id=job_id,
             _request_timeout=_request_timeout,
             _request_auth=_request_auth,
@@ -386,7 +384,7 @@ class ApiClientWrapper:
         if not self.status_api:
             self.status_api = StatusApi(api_client=self.api_client)
 
-        self.status_api.get_status(
+        return self.status_api.get_status(
             job_id=job_id,
             _request_timeout=_request_timeout,
             _request_auth=_request_auth,
