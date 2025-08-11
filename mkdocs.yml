@@ -56,7 +56,7 @@ extra_javascript:
 
 nav:
   - Installation: installation.md
-  - Usage: usage.ipynb
+  - Usage: usage.md
   - API doc: 
     - api/latest/ogc_api_client/index.md
     - api/latest/ogc_api_client/api_client.md
