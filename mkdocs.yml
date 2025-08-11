@@ -65,7 +65,7 @@ nav:
     - api/latest/ogc_api_client/exceptions.md
     - api/latest/ogc_api_client/rest.md
     - api:
-      - api/latest/ogc_api_client/api/capabilities.md
+      - api/latest/ogc_api_client/api/capabilities_api.md
       - api/latest/ogc_api_client/api/conformance_declaration_api.md
       - api/latest/ogc_api_client/api/dismiss_api.md
       - api/latest/ogc_api_client/api/execute_api.md
