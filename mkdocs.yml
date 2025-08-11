@@ -65,6 +65,7 @@ nav:
     - api/latest/ogc_api_client/exceptions.md
     - api/latest/ogc_api_client/rest.md
     - api:
+      - api/latest/ogc_api_client/api/index.md
       - api/latest/ogc_api_client/api/capabilities_api.md
       - api/latest/ogc_api_client/api/conformance_declaration_api.md
       - api/latest/ogc_api_client/api/dismiss_api.md
@@ -75,6 +76,7 @@ nav:
       - api/latest/ogc_api_client/api/result_api.md
       - api/latest/ogc_api_client/api/status_api.md
     - models:
+      - api/latest/ogc_api_client/models/index.md
       - api/latest/ogc_api_client/models/additional_parameter.md
       - api/latest/ogc_api_client/models/additional_parameter_value_inner.md
       - api/latest/ogc_api_client/models/bbox.md
