@@ -1,4 +1,8 @@
 site_name: OGC API Processes Client
+site_url: https://eoepca.github.io/ogc-api-client/
+site_author: Fabrice Brito
+repo_url: https://github.com/EOEPCA/ogc-api-client/
+repo_name: EOEPCA/ogc-api-client
 
 theme:
     logo: imgs/icon-eoap.png
